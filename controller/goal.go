@@ -2,7 +2,7 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
-	"my/database"
+	"stacker/database"
 	"stacker/model"
 	"net/http"
 )
