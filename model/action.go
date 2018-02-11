@@ -4,9 +4,15 @@ import "time"
 
 type Action struct {
 	ID uint
-	Goal Goal
-	Position int
+	GoalID uint
+	Weight int
 	Name string
 	Deadline time.Time
-	Checkbox bool
+	Done bool
+	CRON string
+}
+
+// Get mark from Goal
+func (a Action) mark() {
+
 }

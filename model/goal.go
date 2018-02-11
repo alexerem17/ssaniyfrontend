@@ -7,3 +7,8 @@ type Goal struct {
 	Description string
 	Mark bool
 }
+
+// Get done from all actions
+func (g Goal) done() {
+
+}
