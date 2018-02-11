@@ -19,7 +19,7 @@ var table = []route {
 	"GET",
 	"/:user/list/",
 	1,
-	List,
+	Stacker,
 	},
 }
 
