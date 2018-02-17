@@ -1,6 +1,9 @@
 package database
 
-import "github.com/jinzhu/gorm"
+import (
+	"github.com/jinzhu/gorm"
+	"stacker/model"
+)
 
 var DB *gorm.DB
 func Init(){
@@ -11,4 +14,12 @@ func Init(){
 	}
 	DB.SingularTable(true)
 	DB.LogMode(true)
+
+	DB.Delete(&model.User{})
+	DB.Delete(&model.Action{})
+	DB.Delete(&model.Goal{})
+
+	DB.AutoMigrate(&model.User{})
+	DB.AutoMigrate(&model.Action{})
+	DB.AutoMigrate(&model.Goal{})
 }

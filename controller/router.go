@@ -2,7 +2,6 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
-	"stacker/middleware"
 )
 var R = gin.New()
 type route struct {
@@ -78,8 +77,8 @@ var table = []route {
 }
 
 func Init(){
-	userGroup := R.Group("/:user")
-	userGroup.Use(middleware.Auth())
+	//userGroup := R.Group("/:user")
+	//userGroup.Use(middleware.Auth())
 
 	for _, r := range table {
 		r.routing()

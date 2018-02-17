@@ -16,7 +16,7 @@ func main(){
 	controller.R.Use(gin.Logger())
 	controller.R.Use(middleware.Recovery())
 	controller.R.Use(cors.Default())
-	controller.Init()
+//	controller.Init()
 
 	controller.R.Run(":8082")
 }

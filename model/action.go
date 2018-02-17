@@ -1,18 +1,16 @@
 package model
 
-import "time"
-
 type Action struct {
 	ID uint
 	GoalID uint
-	Weight int
-	Name string
-	Deadline time.Time
-	Done bool
+	Goal Goal
+	Name string `gorm:"not null"`
+	Done bool `gorm:"not null;DEFAULT:0"`
 	CRON string
+	GPS gps `gorm:"type:point"`
 }
 
-// Get mark from Goal
-func (a Action) mark() {
-
+type gps struct {
+	x float64
+	y float64
 }
