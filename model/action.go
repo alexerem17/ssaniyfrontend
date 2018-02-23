@@ -1,13 +1,22 @@
 package model
 
+import "time"
+
 type Action struct {
 	ID uint
-	GoalID uint
-	Goal Goal
 	Name string `gorm:"not null"`
 	Done bool `gorm:"not null;DEFAULT:0"`
-	CRON string
+	Rating uint
+	Repeater string
+	Deadline time.Time
 	GPS gps `gorm:"type:point"`
+
+	CreateTime time.Time `gorm:"DEFAULT:CURRENT_TIMESTAMP"`
+	// Foreign keys
+	GoalID uint
+	Goal Goal
+	UserID uint
+	User Goal
 }
 
 type gps struct {

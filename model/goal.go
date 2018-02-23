@@ -1,12 +1,17 @@
 package model
 
+import "time"
+
 type Goal struct {
 	ID uint
-	UserID uint `gorm:"not null"`
-	User User
 	Name string `gorm:"not null"`
 	Description string
 	Mark bool
+	CreateTime time.Time `gorm:"DEFAULT:CURRENT_TIMESTAMP"`
+
+	// Foreign key
+	UserID uint
+	User User
 }
 
 // Get done from all actions

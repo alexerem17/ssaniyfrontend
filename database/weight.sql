@@ -1,3 +1,0 @@
-ALTER TABLE `action` ADD `weight` INT(5) AS (
-  CURRENT_TIMESTAMP
-) VIRTUAL AFTER `goal_id`;

@@ -2,6 +2,7 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
+	"stacker/middleware"
 )
 var R = gin.New()
 type route struct {
@@ -21,12 +22,12 @@ var table = []route {
 	},
 	{
 		"GET",
-		"/:user/list",
+		"/api/list",
 		List,
 	},
 	{
 		"PUT",
-		"/:user/",
+		"/api/user/",
 		List,
 	},
 
@@ -34,51 +35,51 @@ var table = []route {
 	/* GOAL */
 	{
 		"GET",
-		"/:user/goal",
+		"/api/goal",
 		List,
 	},
 	{
 		"PUT",
-		"/:user/goal/:id",
+		"/api/goal/:id",
 		List,
 	},
 	{
 		"POST",
-		"/:user/goal/:id",
+		"/api/goal/:id",
 		List,
 	},
 	{
 		"DELETE",
-		"/:user/goal/:id",
+		"/api/goal/:id",
 		List,
 	},
 
 	/* ACTION */
 	{
 		"GET",
-		"/:user/action/:id",
+		"/api/action/:id",
 		List,
 	},
 	{
 		"PUT",
-		"/:user/action/:id",
+		"/api/action/:id",
 		List,
 	},
 	{
 		"POST",
-		"/:user/action/:id",
+		"/api/action/:id",
 		List,
 	},
 	{
 		"DELETE",
-		"/:user/action/:id",
+		"/api/action/:id",
 		List,
 	},
 }
 
 func Init(){
-	//userGroup := R.Group("/:user")
-	//userGroup.Use(middleware.Auth())
+	userGroup := R.Group("/api")
+	userGroup.Use(middleware.Auth())
 
 	for _, r := range table {
 		r.routing()
