@@ -2,7 +2,7 @@
   <section>
     <my-header/>
     <nuxt/>
-    <my-footer:text='asdasd'/>
+    <my-footer text='asdasd'/>
   </section>
 </template>
 
@@ -10,7 +10,7 @@
   import myHeader from '~/components/test.vue'
   import myFooter from "~/components/footer.vue"
   export default {
-    components: {myHeader, myVue, myFooter},
+    components: {myHeader, myFooter},
   }
 </script>
 

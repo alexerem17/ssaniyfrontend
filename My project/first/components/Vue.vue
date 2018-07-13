@@ -10,4 +10,3 @@
      props: 'Date'
  }
  </script>
- 

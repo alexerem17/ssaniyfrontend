@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
       <div class="containder">
-          <span class="text-muted">$$$ {{ text }}</span>
+          <span class="text-muted">{{ text }}</span>
       </div>
   </footer>
 </template>
