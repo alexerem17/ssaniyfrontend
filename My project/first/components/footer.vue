@@ -1,14 +1,16 @@
 <template>
   <footer class="footer">
-      <div class="containder">
-          <span class="text-muted">{{ text }}</span>
-      </div>
+    <div class="navbar navbar-dark bg-dark">
+      <span class="text-muted text-center text-white">{{ textFooter }}</span>
+    </div>
   </footer>
 </template>
 
 <script>
 export default {
-  name: 'myFooter',
-  props: ['text'] 
-}
+  name: "myFooter",
+  data: () => ({
+    textFooter: "Проверка текста"
+  })
+};
 </script>

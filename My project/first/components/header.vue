@@ -34,10 +34,10 @@
         data: () => ({
             x: 0,
             date: null,
-            username: 'Ну ты и пидор'
+            username: 'Имя_пользователя'
         }),
         methods: {
-            onClick() { alert("анус себе ткни") },
+            onClick() { alert("Проверка") },
             startTime() {
                 var tm = new Date();
                 var h = tm.getHours();

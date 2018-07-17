@@ -2,13 +2,13 @@
   <section>
     <my-header/>
     <nuxt/>
-    <my-footer text='asdasd'/>
+    <my-footer/>
   </section>
 </template>
 
 <script>
-  import myHeader from '~/components/test.vue'
-  import myFooter from "~/components/footer.vue"
+  import myHeader from '~/components/header.vue'
+  import myFooter from '~/components/footer.vue'
   export default {
     components: {myHeader, myFooter},
   }
