@@ -7,8 +7,10 @@
 </template>
 
 <script>
+  // import Vuetify from 'vuetify'
   import myHeader from '~/components/header.vue'
   import myFooter from '~/components/footer.vue'
+  //Vue.use(Vuetify)
   export default {
     components: {myHeader, myFooter},
   }

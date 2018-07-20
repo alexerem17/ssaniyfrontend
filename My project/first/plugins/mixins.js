@@ -1,6 +1,7 @@
-import Vue from 'Vue'
+import Vue from 'vue'
 
-Vue.mixin({
+
+mixins({
     methods: {
       normal: function (oDate) {
       var iYear = oDate.getFullYear();
@@ -9,4 +10,4 @@ Vue.mixin({
       return `${iYear}-${(iMonth >= 10 ? iMonth: `0${iMonth}`)}-${(iDay >= 10 ? iDay : `0${iDay}`)}`
       }
     }
-  })
+  })  
